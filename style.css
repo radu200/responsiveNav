@@ -5,6 +5,8 @@ body{
   overflow-x:hidden;
 }
 
+
+
 li{
   list-style-type: none;
 }
@@ -187,7 +189,7 @@ box-shadow: 1px 1px 1px 1px #9e3e12;
     box-sizing: border-box;
     margin-top:15px;
     margin-right: -6px;
-    margin-left: 0px;
+    margin-left: -px;
     border-radius:0px 0px 0px 0px;
     border: none;
     font-size: 17px;
@@ -206,15 +208,13 @@ box-shadow: 1px 1px 1px 1px #9e3e12;
     background:#25333f;
     color: #fff;
   }
-  input[type=text], select {
-    width:40px;;
+  select {
+    width:70px;;
     height: 47px;
     font-size: 17px;
-    margin-right: -6px;
-    border-radius:3px 0 0 3px;
-    box-sizing: border-box;
-    text-align: center;
-  }
+    margin-right : -9px;
+
+  
 };
 
   @media  (max-width:568px) {
