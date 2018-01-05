@@ -183,7 +183,7 @@ box-shadow: 1px 1px 1px 1px #9e3e12;
   }
 
   #search-input-desktop {
-    width:39%;
+    width:33%;
     height: 45px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -216,6 +216,7 @@ box-shadow: 1px 1px 1px 1px #9e3e12;
 
   
 };
+
 
   @media  (max-width:568px) {
    
