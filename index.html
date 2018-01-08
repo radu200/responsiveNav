@@ -2,70 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Responsive Navigation Menu for E-commerce ,Shopping Cart ">
+  <meta name="keywords" content="HTML,CSS,JavaScript,Responsive NavBar">
+  <meta name="author" content="Prodan Radu">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Responsive Side Menu</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container-navbar">
-      <span class="open-slide">
-        <a href="#" onclick="openSlideMenu()" class="openSlideMenu">
-          <svg width="30" height="30">
-            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-          </svg>
-        </a>
-      </span>
-      <a><img src="Brand.png"id="logo" alt=""></a>
-      <li><a href="#" id="shopping-cart"><i class="fa fa-shopping-cart fa-2x"> 0</i></a></li>
-      <li><a href="" id="users"><i class="fa fa-user fa-2x"></i> <span class="sign">Sign | join </span></a></li>
+  <body>
+    <nav class="navbar">
+      <div class="container-navbar">
+        <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()" class="openSlideMenu">
+            <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+            </svg>
+          </a>
+        </span>
+        <div class="navbar-brand">
+          <img class="logo" src="Logo.png" alt="">
+        </div>
+        <div>
+          <a href="#" id="shopping-cart">
+            <i class="fa fa-shopping-cart fa-2x"> 0</i>
+          </a>
+          <a href="" id="user-icon">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="sign">Sign | join </span>
+          </a>
+        </div>
+        <div id="search-container-desktop">
+          <form action="">
+            <div class="categories_selector">
+              <div class="select_category">
+                <span class="selected_category">All</span>
+                <span class=""></span>
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+              </div>
 
-      <div id="search-container-desktop"> 
-        <form action="">
-            <select id="categories" name="categories">
+              <select id="categories" name="categories">
                 <option value="all">All</option>
+                <option value="pants">Pants</option>
+                <option value="pants">Pants</option>
                 <option value="shoes">Shoes</option>
                 <option value="pants">Pants</option>
-              </select> 
-          <input type="text" id="search-input-desktop" placeholder="Search.." name="search">
-          <button class="button-search-desktop"type="submit"><i class="fa fa-search"></i></i></button>
-        </form>
+                <option value="shoes">Shoes</option>
+                <option value="pants">Pants</option>
+                <option value="shoes">Shoes</option>
+                <option value="pants">Pants</option>
+                <option value="shoes">Shoes</option>
+                <option value="pants">Pants</option>
+                <option value="shoes">Shoes</option>
+                <option value="pants">Pants</option>
+                <option value="shoes">Shoes</option>
+                <option value="pants">Pants</option>
+              </select>
+            </div>
+            <input type="text" id="search-input-desktop" placeholder="Search.." name="search">
+            <button class="button-search-desktop" type="submit">
+              <i class="fa fa-search"></i>
+              </i>
+            </button>
+          </form>
+        </div>
       </div>
-    </div> 
-  </nav>
-  
-  <div id="search-container-mobile">  
-  <form action="">
-  <input type="text" id="search-input-mobile" placeholder="Search.." name="search">
-   <button class="button-search-mobile"type="submit"><i class="fa fa-search"></i></i></button>
-  </form>
-  </div>
+    </nav>
 
-  
-  <div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </div>
+    <div id="search-container-mobile">
+      <form action="">
+        <input type="text" id="search-input-mobile" placeholder="&#xF002" name="search">
 
-  <div id="main">
-    <h1>Responsive Side Menu</h1>
-  </div>
+      </form>
+    </div>
 
-  <script>
-    function openSlideMenu(){
-      document.getElementById('side-menu').style.width = '250px';
-    }
 
-    function closeSlideMenu(){
-      document.getElementById('side-menu').style.width = '0';
-    }
-  </script>
-</body>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+      <h1>Responsive Menu</h1>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        document.getElementById("categories").addEventListener('change', function () {
+          document.querySelector('.selected_category').innerHTML = this.querySelector('option[value=' + this.value +
+            ']').innerHTML;
+        });
+      });
+
+      function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+      }
+
+      function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+      }
+    </script>
+  </body>
+
 </html>
